@@ -1,0 +1,18 @@
+Audio section:
+    - toggle audio icon to mute
+    - map volume percentage to outer rim highlighting
+    - animate audio bar per start/pause events from controlbar
+
+Status section:
+    - complete progress logic
+
+Control bar section:
+    - load and play music
+    - complete next, previous and play/pause logic
+
+Repeat section:
+    - relay repeat state to parent to manage playback
+
+Song details section:
+    - style song details text
+    - dynamically get and update view from parent

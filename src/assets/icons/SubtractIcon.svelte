@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+    ><title>Remove</title><path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="32"
+        d="M400 256H112"
+    /></svg
+>
+
+<style>
+    svg {
+        stroke: var(--accent-dim);
+    }
+</style>

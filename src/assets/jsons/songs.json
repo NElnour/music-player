@@ -1,0 +1,36 @@
+{
+    "playlist": [
+        {
+            "title": "Huh...",
+            "artist": "El Poteto",
+            "album": "Wish I were stoned",
+            "year": "2021",
+            "duration": "01:59",
+            "url": "/src/assets/music/El_Poteto_-_Huh....mp3"
+        },
+        {
+            "title": "Sunset Cafe",
+            "artist": "La Repeticion",
+            "album": "",
+            "year": "2022",
+            "duration": "01:28",
+            "url": "/src/assets/music/La_Repeticion_-_Sunset_Cafe.mp3"
+        },
+        {
+            "title": "Lockdown Blues",
+            "artist": "Lonely Piano",
+            "album": "",
+            "year": "2022",
+            "duration": "03:05",
+            "url": "/src/assets/music/Lonely_Piano_-_lockdown_blues.mp3"
+        },
+        {
+            "title": "Albinoni - Adagio for Orchestra",
+            "artist": "Madi",
+            "album": "",
+            "year": "2017",
+            "duration": "08:14",
+            "url": "/src/assets/music/Madì_-_Composer_-_Albinoni_Adagio_for_orchestra.mp3"
+        }
+    ]
+}
