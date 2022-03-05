@@ -16,6 +16,11 @@ import song5 from '@/assets/music/Shaun Martin - Yellow Jacket.mp3'
 /**
  * EXPORT METHODS
  */
+const urls = [song1, song2, song3, song4, song5]
+for (let index = 0; index < songs.playlist.length; index++) {
+    songs.playlist[index].url = urls[index]
+    
+}
 export let playlist = songs.playlist;
 export const currentSong = writable(playlist);
 let audio
