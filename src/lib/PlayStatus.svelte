@@ -19,7 +19,8 @@
     });
 
     function advanceProgressBar(played, total) {
-        progressBar.style.width = `${(played * 150) / total}px`;
+        //update status bar
+        progressBar.style.width = `${(played * 100) / total}%`;
     }
 
     const play = () => {
@@ -69,10 +70,11 @@
         delta = 1000;
     }
 
-    export function start() {
+    export function start(song) {
         delta = 1000;
         timePassed = 0;
         played = "00:00";
+        total = song.duration
         totalTime = convertToNum(total);
         playbackInterval = setInterval(play, delta);
     }

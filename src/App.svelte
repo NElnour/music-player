@@ -3,14 +3,12 @@
   import ControlBar from "./lib/ControlBar.svelte";
   import PlayStatus from "./lib/PlayStatus.svelte";
   import VolumeControl from "./lib/VolumeControl.svelte";
-  import RepeatControl from "./lib/RepeatControl.svelte";
   import {
     playlist,
     playAudio,
     pauseAudio,
     unpauseAudio,
     adjustVolume,
-    currentSong,
   } from "./stores/playlist-store";
   import Attribution from "./lib/Attribution.svelte";
   import Playlist from "./lib/Playlist.svelte";
@@ -27,10 +25,6 @@
     if (!volume) {
       volume = volumeController.getVolume();
     }
-    playbackController.resetPlayback(true);
-    pauseAudio();
-    status.stop();
-    status.reset();
 
     if (i === 0 && delta < 0) {
       i = playlist.length + delta;
@@ -39,8 +33,12 @@
     } else if (i > 0 && delta < 0) {
       i += delta;
     }
+    playbackController.resetPlayback(true);
+    pauseAudio();
+    status.stop();
+    status.reset();
     playingNow = playlist[i];
-    status.start();
+    status.start(playingNow);
     playAudio(playingNow, volume);
   };
 
@@ -54,14 +52,6 @@
       e.detail.state == "play" ? unpauseAudio() : pauseAudio();
     }
   };
-
-  // const updatePlayback = (e) => {
-  //   let n = e.detail.repeat;
-  //   if (n === 1) {
-  //     playlist.unshift(playingNow);
-  //     currentSong.set(playlist);
-  //   }
-  // };
 
   const setVolume = (e) => {
     let newVal = e.detail.volume;
