@@ -1,10 +1,10 @@
 <script>
-    import AudioBars from "../assets/icons/AudioBars.svelte";
     import AddIcon from "../assets/icons/AddIcon.svelte";
     import SubtractIcon from "../assets/icons/SubtractIcon.svelte";
     import VolumeIcon from "../assets/icons/VolumeIcon.svelte";
     import { createEventDispatcher } from "svelte";
     import MuteIcon from "../assets/icons/MuteIcon.svelte";
+    import AudioBars from "./AudioBars.svelte";
 
     const dispatcher = createEventDispatcher();
     let volume = 50;
@@ -32,7 +32,7 @@
         }
     };
     const silence = () => {
-        prevVolume = volume
+        prevVolume = volume;
         volume = 0;
         mute = true;
         dispatcher("volume", {
@@ -54,7 +54,7 @@
             <button class="control-icon" on:click={lowerVolume}>
                 <SubtractIcon />
             </button>
-            <span id="audio-bars"><AudioBars /></span>
+            <AudioBars />
             <button class="control-icon" on:click={increaseVolume}>
                 <AddIcon />
             </button>
@@ -83,7 +83,8 @@
 
         align-items: center;
         gap: 20px;
-        padding-left: 20%;
+        width: 100%;
+        padding-left: 10%;
     }
 
     #outer-rim {
@@ -150,13 +151,5 @@
         border: none;
         width: 24px;
         aspect-ratio: 1/ 1;
-    }
-
-    #audio-bars {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: scaleX(1.5);
     }
 </style>

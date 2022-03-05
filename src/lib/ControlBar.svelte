@@ -28,42 +28,52 @@
     };
 </script>
 
-<div>
-    <button on:click={previous}>
-        <span class="icon">
-            <RewindIcon />
-        </span>
-    </button>
-    <button on:click={playPause} id="playPause">
-        <span class="icon main">
-            {#if !play}
-                <PlayIcon />
-            {/if}
-            {#if play}
-                <PauseIcon />
-            {/if}
-        </span>
-    </button>
-    <button on:click={next}>
-        <span class="icon">
-            <ForwardIcon />
-        </span>
-    </button>
+<div id="container">
+    <div id="controller">
+        <button on:click={previous}>
+            <span class="icon">
+                <RewindIcon />
+            </span>
+        </button>
+        <button on:click={playPause} id="playPause">
+            <span class="icon main">
+                {#if !play}
+                    <PlayIcon />
+                {/if}
+                {#if play}
+                    <PauseIcon />
+                {/if}
+            </span>
+        </button>
+        <button on:click={next}>
+            <span class="icon">
+                <ForwardIcon />
+            </span>
+        </button>
+    </div>
 </div>
 
 <style>
-    div {
+    #container {
         position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 0.8em;
+        padding-bottom: 1em;
+    }
+    #controller {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        min-width: 90%;
+        min-width: 100%;
         max-width: 100%;
-        padding-left: 3em;
-        padding-right: 3em;
-
-        margin-top: 0.8em;
+        padding-left: 4em;
+        padding-right: 4em;
 
         background: transparent;
     }

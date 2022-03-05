@@ -10,8 +10,10 @@
     pauseAudio,
     unpauseAudio,
     adjustVolume,
+    currentSong,
   } from "./stores/playlist-store";
-import Attribution from "./lib/Attribution.svelte";
+  import Attribution from "./lib/Attribution.svelte";
+  import Playlist from "./lib/Playlist.svelte";
 
   let i = 0;
   let playingNow = playlist[i];
@@ -25,6 +27,10 @@ import Attribution from "./lib/Attribution.svelte";
     if (!volume) {
       volume = volumeController.getVolume();
     }
+    playbackController.resetPlayback(true);
+    pauseAudio();
+    status.stop();
+    status.reset();
 
     if (i === 0 && delta < 0) {
       i = playlist.length + delta;
@@ -33,12 +39,7 @@ import Attribution from "./lib/Attribution.svelte";
     } else if (i > 0 && delta < 0) {
       i += delta;
     }
-
-    playbackController.resetPlayback(true);
-    pauseAudio();
     playingNow = playlist[i];
-    status.stop();
-    status.reset();
     status.start();
     playAudio(playingNow, volume);
   };
@@ -57,12 +58,8 @@ import Attribution from "./lib/Attribution.svelte";
   const updatePlayback = (e) => {
     let n = e.detail.repeat;
     if (n === 1) {
-      //replicate playingNow to top of queue
       playlist.unshift(playingNow);
-      console.log(playlist);
-    } else if (n === -1) {
-      // remove one instance of playingNow from queue
-      playlist.shift();
+      currentSong.set(playlist);
     }
   };
 
@@ -75,24 +72,27 @@ import Attribution from "./lib/Attribution.svelte";
 <Attribution />
 <div id="background" />
 
-<main>
-  <!-- <Canvas /> -->
-  <SongDetails title={playingNow.title} artist={playingNow.artist} />
-  <VolumeControl on:volume={setVolume} bind:this={volumeController} />
-  <span>
-    <PlayStatus
-      total={playingNow.duration}
-      bind:this={status}
-      on:playback={shufflePlayQueue}
-    />
-    <RepeatControl on:repeat={updatePlayback} />
-    <ControlBar
-      on:playback={shufflePlayQueue}
-      on:state={playPause}
-      bind:this={playbackController}
-    />
-  </span>
-</main>
+<div id="main">
+  <main>
+    <SongDetails title={playingNow.title} artist={playingNow.artist} />
+    <VolumeControl on:volume={setVolume} bind:this={volumeController} />
+    <span>
+      <PlayStatus
+        total={playingNow.duration}
+        bind:this={status}
+        on:playback={shufflePlayQueue}
+      />
+      <RepeatControl on:repeat={updatePlayback} />
+      <ControlBar
+        on:playback={shufflePlayQueue}
+        on:state={playPause}
+        bind:this={playbackController}
+      />
+    </span>
+  </main>
+
+  <Playlist {playingNow} />
+</div>
 
 <style>
   :root {
@@ -104,22 +104,35 @@ import Attribution from "./lib/Attribution.svelte";
     --button-color: #232628;
     --accent-dim: #5da2a2;
     --accent: #4beafe;
-    --grey: #a7a7a78f;
+    --accent-soft: #4be9feaf;
+    --grey: #b5b5b5;
+  }
+
+  #main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 10%;
+    padding-left: 10%;
   }
 
   #background {
-    position: fixed;
+    position: absolute;
     top: 50%;
-    left: 50%;
+    left: 32%;
     transform: translate(-50%, -50%);
     z-index: 0;
     width: 650px;
     height: 650px;
     background: rgb(28, 29, 33);
     border-radius: 50%;
-    box-shadow: inset 10px 10px 10px rgb(30, 23, 41),
-      inset -10px -10px 20px rgb(37, 66, 66),
-      inset -3px -3px 5px rgba(255, 255, 255, 0.6);
+    box-shadow: inset -10px -10px 10px rgb(30, 23, 41),
+      inset 10px 10px 20px rgb(37, 66, 66),
+      inset 3px 3px 5px rgba(255, 255, 255, 0.6);
   }
 
   main {
@@ -156,7 +169,8 @@ import Attribution from "./lib/Attribution.svelte";
     align-content: center;
     width: 435px;
     height: 885px;
-    gap: 60px;
+    margin: 1% 0;
+    gap: 40px;
 
     border-radius: 30px;
 

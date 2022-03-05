@@ -54,7 +54,7 @@
     };
 
     const convertToString = (time) => {
-        let seconds = ((time % 60000) / 1000).toFixed(0);
+        let seconds = Math.floor((time % 60000) / 1000);
         let minutes = Math.floor(time / 60000);
         let secondPrefix = seconds < 10 ? "0" : "";
         let minutePrefix = minutes < 10 ? "0" : "";
@@ -102,17 +102,19 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
+        margin: auto;
+        width: 100%;
     }
 
     dl {
         color: var(--grey);
         line-height: 1em;
-        font-size: 0.5em;
+        font-size: 0.7em;
         font-weight: 600;
         letter-spacing: 1px;
         flex: 0 0 1;
-        width: 30px;
+        width: 40px;
     }
 
     #progress-bar {

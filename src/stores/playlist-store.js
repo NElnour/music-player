@@ -1,4 +1,7 @@
 import songs from '../assets/jsons/songs.json'
+import {
+    writable
+} from 'svelte/store';
 
 /**
  * AUDIO PLAYBACK
@@ -7,8 +10,13 @@ import songs from '../assets/jsons/songs.json'
 /**
  * EXPORT METHODS
  */
+export let playlist = songs.playlist;
+export const currentSong = writable(playlist);
 let audio
-export const playlist = songs.playlist;
+
+currentSong.subscribe(songs => {
+    playlist = songs
+})
 
 export const playAudio = (song, volume) => {
     audio = new Audio(song.url)
@@ -16,11 +24,17 @@ export const playAudio = (song, volume) => {
     audio.volume = volume
 }
 export const pauseAudio = () => {
-    audio.pause()
+    if (audio) {
+        audio.pause()
+    }
 }
 export const unpauseAudio = () => {
-    audio.play()
+    if (audio) {
+        audio.play()
+    }
 }
 export const adjustVolume = (intensity) => {
-    audio.volume = intensity
+    if (audio) {
+        audio.volume = intensity
+    }
 }

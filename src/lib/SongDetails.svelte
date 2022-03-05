@@ -25,17 +25,17 @@
     h4,
     h5 {
         line-height: 1px;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.851);
         letter-spacing: 1px;
         font-size: 1.2em;
         font-weight: 700;
     }
 
     h4 {
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
     h5 {
-        font-size: 0.4em;
+        font-size: 0.7em;
         color: var(--grey);
     }
 

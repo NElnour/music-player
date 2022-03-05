@@ -1,6 +1,22 @@
 {
     "playlist": [
         {
+            "title": "Yellow Jacket",
+            "artist": "Dream Session",
+            "album": "",
+            "year": "2021",
+            "duration": "00:06",
+            "url": "/src/assets/music/Shaun Martin - Yellow Jacket.mp3"
+        },
+        {
+            "title": "Dancing in the Moonlight",
+            "artist": "Jubel ft. NEIMY",
+            "album": "",
+            "year": "2021",
+            "duration": "02:44",
+            "url": "/src/assets/music/Jubel_-_Dancing_In_The_Moonlight_feat_NEIMY.mp3"
+        },
+        {
             "title": "Huh...",
             "artist": "El Poteto",
             "album": "Wish I were stoned",
@@ -23,14 +39,6 @@
             "year": "2022",
             "duration": "03:05",
             "url": "/src/assets/music/Lonely_Piano_-_lockdown_blues.mp3"
-        },
-        {
-            "title": "Albinoni - Adagio for Orchestra",
-            "artist": "Madi",
-            "album": "",
-            "year": "2017",
-            "duration": "08:14",
-            "url": "/src/assets/music/Madì_-_Composer_-_Albinoni_Adagio_for_orchestra.mp3"
         }
     ]
 }

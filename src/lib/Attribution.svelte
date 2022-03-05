@@ -13,7 +13,11 @@
                 alt="Smart home & music app design mockup by Elena Zelova"
             />
             <dl>
-                <p>Smart home & music app design mockup by Elena Zelova</p>
+                <p>
+                    Smart home & music app design mockup by <span id="artist"
+                        >Elena Zelova</span
+                    >
+                </p>
                 <a href="https://bit.ly/3hDaMKS" target="__blank"
                     ><AttributionIcon /></a
                 >
@@ -39,20 +43,18 @@
         min-height: 300px;
         aspect-ratio: 1 / 1;
 
-        top: 80%;
-        left: 80%;
+        top: 30%;
+        left: 30%;
         background-color: rgba(41, 68, 69, 0.498);
-        border-radius: 5px;
+        border-radius: 10px;
         margin: auto;
-    }
-
-    #main:hover {
-        cursor: pointer;
+        transition: all 0.6s;
     }
 
     p {
         color: #fff;
         font-weight: 400;
+        font-size: 0.9em;
 
         text-align: center;
     }
@@ -65,11 +67,16 @@
         align-items: center;
         width: 26px;
         height: 26px;
+        opacity: 0.5;
+        transition: all 0.6s;
+    }
+    a:hover{
+        opacity: 1;
     }
 
     img {
         width: 80%;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 
     #main:hover #dropdown-container,
@@ -86,6 +93,7 @@
         justify-content: center;
         align-items: center;
         align-content: center;
+        transition: all 0.6s;
     }
 
     dl {
@@ -95,5 +103,10 @@
         align-items: center;
         align-content: center;
         padding: 3%;
+    }
+
+    #artist {
+        font-weight: 600;
+        color: var(--accent);
     }
 </style>

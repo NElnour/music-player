@@ -58,6 +58,7 @@
         justify-content: center;
         align-items: center;
         gap: 15px;
+        width: 100%;
     }
 
     button {
@@ -106,7 +107,7 @@
         /* color: #858585; */
         color: var(--grey);
         line-height: 1em;
-        font-size: 0.6em;
+        font-size: 0.8em;
         font-weight: 600;
         letter-spacing: 1px;
     }

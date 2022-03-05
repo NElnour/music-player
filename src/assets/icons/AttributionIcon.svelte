@@ -8,6 +8,8 @@
 >
 <style>
     svg {
-        stroke: rgb(67, 217, 240);
+        /* stroke: rgb(67, 217, 240); */
+        stroke: rgb(197, 143, 247);
+        fill: transparent;
     }
 </style>
