@@ -9,7 +9,7 @@ export default defineConfig({
   },
   plugins: [svelte()],
   build: {
-    chunkSizeWarningLimit: 1600,
+    chunkSizeWarningLimit: 15000,
     assetsInlineLimit: '0',
   },
 })
