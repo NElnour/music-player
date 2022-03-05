@@ -3,11 +3,11 @@ import {
     writable
 } from 'svelte/store';
 
-import song1 from '@/assets/music/El_Poteto_-_Huh....mp3'
+import song3 from '@/assets/music/El_Poteto_-_Huh....mp3'
 import song2 from '@/assets/music/Jubel_-_Dancing_In_The_Moonlight_feat_NEIMY.mp3'
-import song3 from '@/assets/music/La_Repeticion_-_Sunset_Cafe.mp3'
-import song4 from '@/assets/music/Lonely_Piano_-_lockdown_blues.mp3'
-import song5 from '@/assets/music/Shaun Martin - Yellow Jacket.mp3'
+import song4 from '@/assets/music/La_Repeticion_-_Sunset_Cafe.mp3'
+import song5 from '@/assets/music/Lonely_Piano_-_lockdown_blues.mp3'
+import song1 from '@/assets/music/Shaun Martin - Yellow Jacket.mp3'
 
 /**
  * AUDIO PLAYBACK
