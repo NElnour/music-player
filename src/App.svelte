@@ -55,13 +55,13 @@
     }
   };
 
-  const updatePlayback = (e) => {
-    let n = e.detail.repeat;
-    if (n === 1) {
-      playlist.unshift(playingNow);
-      currentSong.set(playlist);
-    }
-  };
+  // const updatePlayback = (e) => {
+  //   let n = e.detail.repeat;
+  //   if (n === 1) {
+  //     playlist.unshift(playingNow);
+  //     currentSong.set(playlist);
+  //   }
+  // };
 
   const setVolume = (e) => {
     let newVal = e.detail.volume;
@@ -82,7 +82,7 @@
         bind:this={status}
         on:playback={shufflePlayQueue}
       />
-      <RepeatControl on:repeat={updatePlayback} />
+      <!-- <RepeatControl on:repeat={updatePlayback} /> -->
       <ControlBar
         on:playback={shufflePlayQueue}
         on:state={playPause}
@@ -185,8 +185,9 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    gap: 20px;
+    gap: 100px;
     width: 100%;
+    margin-top: 100px;
   }
 
   @media (min-width: 480px) {

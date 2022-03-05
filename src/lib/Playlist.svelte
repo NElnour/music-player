@@ -21,9 +21,9 @@
     </div>
     <div id="full">
         {#each songs as song, i}
-            <span class={playingNow != song ? "inactive" : ""}>
-                {i + 1}
-                <Song {song} show={playingNow != song ? "inactive" : ""} />
+            <span class={playingNow !== song ? "inactive" : ""}>
+                <!-- {i + 1} -->
+                <Song {song} show={playingNow !== song ? "inactive" : ""} />
             </span>
         {/each}
     </div>
