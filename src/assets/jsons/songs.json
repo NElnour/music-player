@@ -6,7 +6,7 @@
             "album": "",
             "year": "2021",
             "duration": "08:06",
-            "url": "/src/assets/music/Shaun Martin - Yellow Jacket.mp3"
+            "url": "/assets/music/Shaun Martin - Yellow Jacket.mp3"
         },
         {
             "title": "Dancing in the Moonlight",
@@ -14,7 +14,7 @@
             "album": "",
             "year": "2021",
             "duration": "02:44",
-            "url": "/src/assets/music/Jubel_-_Dancing_In_The_Moonlight_feat_NEIMY.mp3"
+            "url": "/assets/music/Jubel_-_Dancing_In_The_Moonlight_feat_NEIMY.mp3"
         },
         {
             "title": "Huh...",
@@ -22,7 +22,7 @@
             "album": "Wish I were stoned",
             "year": "2021",
             "duration": "01:59",
-            "url": "/src/assets/music/El_Poteto_-_Huh....mp3"
+            "url": "/assets/music/El_Poteto_-_Huh....mp3"
         },
         {
             "title": "Sunset Cafe",
@@ -30,7 +30,7 @@
             "album": "",
             "year": "2022",
             "duration": "01:28",
-            "url": "/src/assets/music/La_Repeticion_-_Sunset_Cafe.mp3"
+            "url": "/assets/music/La_Repeticion_-_Sunset_Cafe.mp3"
         },
         {
             "title": "Lockdown Blues",
@@ -38,7 +38,7 @@
             "album": "",
             "year": "2022",
             "duration": "03:05",
-            "url": "/src/assets/music/Lonely_Piano_-_lockdown_blues.mp3"
+            "url": "/assets/music/Lonely_Piano_-_lockdown_blues.mp3"
         }
     ]
 }
