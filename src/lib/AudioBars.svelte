@@ -1,5 +1,5 @@
 <script>
-    import AudioBarsIcon from "../assets/icons/AudioBarsIcon.svelte";
+    import AudioBarsIcon from "@/assets/icons/AudioBarsIcon.svelte";
 </script>
 
 <span id="audio-bars"><AudioBarsIcon /> </span>

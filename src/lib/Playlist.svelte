@@ -1,7 +1,7 @@
 <script>
-    import { playlist, currentSong } from "../stores/playlist-store";
+    import { playlist, currentSong } from "@/stores/playlist-store";
     import Song from "./Song.svelte";
-    import scroller from "../assets/scroll-down.gif";
+    import scroller from "@/assets/scroll-down.gif";
 
     let songs = playlist;
     export let playingNow;

@@ -1,9 +1,9 @@
 <script>
-    import AddIcon from "../assets/icons/AddIcon.svelte";
-    import SubtractIcon from "../assets/icons/SubtractIcon.svelte";
-    import VolumeIcon from "../assets/icons/VolumeIcon.svelte";
+    import AddIcon from "@/assets/icons/AddIcon.svelte";
+    import SubtractIcon from "@/assets/icons/SubtractIcon.svelte";
+    import VolumeIcon from "@/assets/icons/VolumeIcon.svelte";
     import { createEventDispatcher } from "svelte";
-    import MuteIcon from "../assets/icons/MuteIcon.svelte";
+    import MuteIcon from "@/assets/icons/MuteIcon.svelte";
     import AudioBars from "./AudioBars.svelte";
 
     const dispatcher = createEventDispatcher();

@@ -1,7 +1,7 @@
 <script>
-    import SubtractIcon from "../assets/icons/SubtractIcon.svelte";
-    import AddIcon from "../assets/icons/AddIcon.svelte";
-    import ResetIcon from "../assets/icons/ResetIcon.svelte";
+    import SubtractIcon from "@/assets/icons/SubtractIcon.svelte";
+    import AddIcon from "@/assets/icons/AddIcon.svelte";
+    import ResetIcon from "@/assets/icons/ResetIcon.svelte";
     import { createEventDispatcher } from "svelte";
 
     let repeats = 0;

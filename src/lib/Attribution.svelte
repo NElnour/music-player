@@ -1,7 +1,7 @@
 <script>
-    import AttributionIcon from "../assets/icons/AttributionIcon.svelte";
-    import DribbbleIcon from "../assets/icons/DribbbleIcon.svelte";
-    import mockup from "../assets/dribbble_mockup.png";
+    import AttributionIcon from "@/assets/icons/AttributionIcon.svelte";
+    import DribbbleIcon from "@/assets/icons/DribbbleIcon.svelte";
+    import mockup from "@/assets/dribbble_mockup.png";
 </script>
 
 <div id="main">

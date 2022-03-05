@@ -1,8 +1,8 @@
 <script>
-    import PlayIcon from "../assets/icons/PlayIcon.svelte";
-    import PauseIcon from "../assets/icons/PauseIcon.svelte";
-    import ForwardIcon from "../assets/icons/ForwardIcon.svelte";
-    import RewindIcon from "../assets/icons/RewindIcon.svelte";
+    import PlayIcon from "@/assets/icons/PlayIcon.svelte";
+    import PauseIcon from "@/assets/icons/PauseIcon.svelte";
+    import ForwardIcon from "@/assets/icons/ForwardIcon.svelte";
+    import RewindIcon from "@/assets/icons/RewindIcon.svelte";
     import { createEventDispatcher } from "svelte";
 
     const dispatcher = createEventDispatcher();
