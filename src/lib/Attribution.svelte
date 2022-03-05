@@ -34,6 +34,7 @@
         width: 32px;
         height: 32px;
         transition: all 0.6s;
+        z-index: 3;
     }
 
     #dropdown-container {
