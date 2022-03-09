@@ -45,7 +45,7 @@
   const playPause = (e) => {
     volume = volumeController.getVolume();
     if (status.playedSoFar() == "00:00") {
-      e.detail.state == "play" ? status.start() : status.pause();
+      e.detail.state == "play" ? status.start(playingNow) : status.pause();
       e.detail.state == "play" ? playAudio(playingNow, volume) : pauseAudio();
     } else {
       e.detail.state == "play" ? status.unpause() : status.pause();
